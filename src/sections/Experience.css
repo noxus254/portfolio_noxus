@@ -1,0 +1,148 @@
+.experience-section {
+    max-width: 800px;
+}
+
+.experience-container {
+    display: flex;
+    margin-top: 50px;
+    min-height: 350px;
+}
+
+.tab-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: max-content;
+    border-left: 2px solid #233554;
+    height: max-content;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    border-left: 2px solid transparent;
+    padding: 0 20px;
+    height: 42px;
+    text-align: left;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    /* The highlight is handled by .tab-highlight, but we need width */
+    min-width: 140px;
+}
+
+.tab-btn:hover,
+.tab-btn:focus {
+    background-color: #112240;
+    color: var(--accent-color);
+}
+
+.tab-btn.active {
+    color: var(--accent-color);
+    background-color: #112240;
+    /* Adding active background keeps it highlighted */
+}
+
+.tab-highlight {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    /* Pull back over the border */
+    width: 2px;
+    height: 42px;
+    background-color: var(--accent-color);
+    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.job-content {
+    margin-left: 30px;
+    flex-grow: 1;
+}
+
+.job-role {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.job-company {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.job-duration {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+.job-points {
+    list-style: none;
+    padding: 0;
+}
+
+.job-points li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.job-points li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+    .experience-container {
+        flex-direction: column;
+    }
+
+    .tab-list {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 30px;
+        border-left: none;
+        border-bottom: 2px solid #233554;
+        overflow-x: auto;
+    }
+
+    .tab-highlight {
+        width: 42px;
+        /* Wait, for horizontal tabs highlight should be width */
+        height: 2px;
+        top: auto;
+        bottom: -2px;
+        left: 0;
+        transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    /* Complex logic for horizontal slide highlight would need updated transform logic.
+     For simplicity in mobile, let's just highlight the active tab button border bottom.
+     And hide the slider. */
+    .tab-highlight {
+        display: none;
+    }
+
+    .tab-btn {
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .tab-btn.active {
+        border-bottom: 2px solid var(--accent-color);
+    }
+}
