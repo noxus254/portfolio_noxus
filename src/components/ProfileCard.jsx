@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
-import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiInstagram } from 'react-icons/fi';
-import './ProfileCard.css';
+import React, { useRef } from "react";
+import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
+import { FiGithub, FiLinkedin, FiTwitter, FiInstagram } from "react-icons/fi";
+import "./ProfileCard.css";
 import hieuImg from "../assets/hieu.jpg";
 
 const ProfileCard = () => {
@@ -13,8 +13,16 @@ const ProfileCard = () => {
   const mouseXSpring = useSpring(x);
   const mouseYSpring = useSpring(y);
 
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["17.5deg", "-17.5deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-17.5deg", "17.5deg"]);
+  const rotateX = useTransform(
+    mouseYSpring,
+    [-0.5, 0.5],
+    ["17.5deg", "-17.5deg"],
+  );
+  const rotateY = useTransform(
+    mouseXSpring,
+    [-0.5, 0.5],
+    ["-17.5deg", "17.5deg"],
+  );
 
   const handleMouseMove = (e) => {
     const rect = ref.current.getBoundingClientRect();
@@ -57,20 +65,28 @@ const ProfileCard = () => {
         className="card-content"
       >
         <div className="card-image-wrapper">
-            <img 
-                src={hieuImg}
-                alt="Profile" 
-                className="card-avatar"
-            />
+          <img src={hieuImg} alt="Profile" className="card-avatar" />
         </div>
         <h3 className="card-name">Nguyen Trung Hieu</h3>
         <p className="card-role">Full Stack Developer</p>
-        
+
         <div className="card-socials">
-             <a href="https://github.com" target="_blank" rel="noreferrer"><FiGithub /></a>
-             <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FiLinkedin /></a>
-             <a href="https://twitter.com" target="_blank" rel="noreferrer"><FiTwitter /></a>
-             <a href="https://instagram.com" target="_blank" rel="noreferrer"><FiInstagram /></a>
+          <a href="https://github.com" target="_blank" rel="noreferrer">
+            <FiGithub />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <FiLinkedin />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noreferrer">
+            <FiTwitter />
+          </a>
+          <a
+            href="https://instagram.com/_.noxus"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FiInstagram />
+          </a>
         </div>
       </div>
     </motion.div>

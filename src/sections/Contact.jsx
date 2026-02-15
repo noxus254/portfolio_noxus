@@ -1,8 +1,14 @@
-import React from 'react';
-import SectionWrapper from '../components/SectionWrapper';
-import Reveal from '../components/Reveal';
-import { FiPhone, FiMail, FiFacebook, FiSend, FiInstagram } from 'react-icons/fi';
-import './Contact.css';
+import React from "react";
+import SectionWrapper from "../components/SectionWrapper";
+import Reveal from "../components/Reveal";
+import {
+  FiPhone,
+  FiMail,
+  FiFacebook,
+  FiSend,
+  FiInstagram,
+} from "react-icons/fi";
+import "./Contact.css";
 
 const Contact = () => {
   return (
@@ -11,8 +17,8 @@ const Contact = () => {
         <div className="contact-header">
           <h2 className="contact-title">Connect with me</h2>
           <p className="contact-subtitle">
-            Have an idea or project to discuss? Don't hesitate to contact me. I'm always
-            ready to listen and collaborate!
+            Have an idea or project to discuss? Don't hesitate to contact me.
+            I'm always ready to listen and collaborate!
           </p>
         </div>
 
@@ -20,7 +26,7 @@ const Contact = () => {
           <div className="contact-info">
             <div className="info-card">
               <h3>Contact me</h3>
-              
+
               <a href="tel:0707207254" className="info-item social-item">
                 <div className="icon-box">
                   <FiPhone />
@@ -31,7 +37,10 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a href="mailto:minhlahieune@gmail.com" className="info-item social-item">
+              <a
+                href="mailto:minhlahieune@gmail.com"
+                className="info-item social-item"
+              >
                 <div className="icon-box">
                   <FiMail />
                 </div>
@@ -44,8 +53,13 @@ const Contact = () => {
 
             <div className="info-card">
               <h3>Follow me</h3>
-              
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-item">
+
+              <a
+                href="https://facebook.com/trunghieu.user"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-item"
+              >
                 <div className="icon-box">
                   <FiFacebook />
                 </div>
@@ -55,9 +69,14 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-item">
+              <a
+                href="https://instagram.com/_.noxus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-item"
+              >
                 <div className="icon-box">
-                  <FiInstagram/>
+                  <FiInstagram />
                 </div>
                 <div className="info-details">
                   <span className="label">Instagram</span>
@@ -71,17 +90,29 @@ const Contact = () => {
             <form className="contact-form">
               <div className="form-group">
                 <label htmlFor="name">Your name</label>
-                <input type="text" id="name" placeholder="Nguyen Trung Hieu" />
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your full name"
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="email">Email or Phone number</label>
-                <input type="text" id="email" placeholder="minhlahieune@gmail.com or 0707207254" />
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="Enter your email or phone number"
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="message">Message</label>
-                <textarea id="message" rows="5" placeholder="Share your ideas or project..."></textarea>
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder="Tell me about your project or idea..."
+                ></textarea>
               </div>
 
               <button type="submit" className="submit-btn">
