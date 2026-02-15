@@ -9,28 +9,33 @@ main {
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 150px;
+  padding-top: calc(var(--nav-height) + 20px);
 }
 
 @media (max-width: 1080px) {
   main {
     padding: 0 100px;
+    padding-top: calc(var(--nav-height) + 10px);
   }
 }
 
 @media (max-width: 768px) {
   main {
     padding: 0 50px;
+    padding-top: calc(var(--nav-height) + 20px);
   }
 }
 
 @media (max-width: 480px) {
   main {
     padding: 0 25px;
+    padding-top: calc(var(--nav-height) + 20px);
   }
 }
 
 @media (max-width: 320px) {
   main {
     padding: 0 15px;
+    padding-top: calc(var(--nav-height) + 20px);
   }
 }
