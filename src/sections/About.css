@@ -14,7 +14,8 @@
 .section-title::after {
     content: '';
     display: block;
-    width: 300px;
+    flex-grow: 1;
+    max-width: 300px;
     height: 1px;
     background-color: #233554;
     margin-left: 20px;
